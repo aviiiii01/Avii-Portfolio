@@ -1,0 +1,418 @@
+{% extends "layout.html" %}
+
+{% block content%}
+
+
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <img src="{{url_for('static',filename='assets/img/hero-img.jpg')}}" alt="" data-aos="fade-in">
+
+      <div class="container d-flex flex-column align-items-center justify-content-center text-center" data-aos="fade-up" data-aos-delay="100">
+        <h2>{{Billo['Myname']}}</h2>
+        <p><span class="typed" data-typed-items="Designer, Python Developer, Freelancer, Video Editor, Web Developer, "></span></p>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+          <div class="col-md-6">
+
+            <div class="row justify-content-between gy-4">
+              <div class="col-lg-5">
+                <img src="{{url_for('static',filename='assets/img/profile-img.jpg')}}" class="img-fluid" alt="">
+              </div>
+              <div class="col-lg-7 about-info">
+                <p><strong>Name: </strong> <span>{{Billo["Myname"]}}</span></p>
+                <p><strong>Profile: </strong> <span>{{Billo['Profile']}}</span></p>
+                <p><strong>Email: </strong> <span>{{Billo['Email']}}</span></p>
+                <p><strong>Phone: </strong> <span>{{Billo['Phone']}}</span></p>
+              </div>
+            </div>
+
+            <div class="skills-content skills-animation">
+
+              <h5>Skills</h5>
+
+              <div class="progress">
+                <span class="skill"><span>HTML</span> <i class="val">80%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div><!-- End Skills Item -->
+
+              <div class="progress">
+                <span class="skill"><span>CSS</span> <i class="val">60%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div><!-- End Skills Item -->
+
+              <div class="progress">
+                <span class="skill"><span>Python Language</span> <i class="val">85%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill"><span>Flask</span> <i class="val">40%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill"><span>JavaScript</span> <i class="val">70%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div><!-- End Skills Item -->
+
+
+              <div class="progress">
+                <span class="skill"><span>Video editing</span> <i class="val">70%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div><!-- End Skills Item -->
+
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="about-me">
+              <h4>About me</h4>
+              <p>
+                Currently in 2nd year, B-tech from CSE from ABES Engineering college. 
+                I am an Enthusiastic and versatile coder with an intermediate foundation in C, C++, 
+                and Python. Proficient in implementing algorithmic solutions and passionate about continuous 
+                learning in the dynamic field of software development. Committed to delivering high-quality,
+                 efficient code and continuously expanding my skills in the ever-evolving world of programming.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Resume Section -->
+    <section id="portfolio" class="resume section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Resume</h2>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Sumary</h3>
+
+            <div class="resume-item pb-0">
+              <h4>{{Billo['Myname']}}</h4>
+              <p><em>An Enthusiastic and versatile coder with an intermediate foundation in C, C++, and Python. Proficient in implementing algorithmic solutions and passionate about continuous learning in the dynamic field of software development.</em></p>
+              <ul>
+                <li>Crosing Republic, Ghaziabad</li>
+                <li>{{Billo['Phone']}}</li>
+                <li>{{Billo['Email']}}</li>
+              </ul>
+            </div><!-- Edn Resume Item -->
+
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>High School</h4>
+              <h5>2019 - 2020</h5>
+              <p><em>{{Billo['school']}}</em></p>
+              <p>I have done my 10th standard from Renaissance School and Got 93.2%.</p>
+            </div><!-- Edn Resume Item -->
+
+            <div class="resume-item">
+              <h4>12th Board  </h4>
+              <h5>2021 - 2022</h5>
+              <p><em>{{Billo['school']}}</em></p>
+              <p>I have done my 10th standard from Renaissance School and Got 93.2%.</p>
+            </div><!-- Edn Resume Item -->
+
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="resume-title">Professional Experience</h3>
+            <div class="resume-item">
+              <h4>Btech Engineering</h4>
+              <h5>2022 - Present</h5>
+              <p><em>{{Billo['college']}}</em></p>
+              <ul>
+                <li>Lead in the design, development, and implementation of the graphic, layout, and production communication materials</li>
+                <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project. </li>
+                <li>Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the design</li>
+                <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000</li>
+              </ul>
+            </div><!-- Edn Resume Item -->
+
+            <div class="resume-item">
+              <h4>Hobbies</h4>
+              <p><em>Life is better when you're immersed in your hobbies.</em></p>
+              <ul>
+                <li>Open Source</li>
+                <li>Machine Learning</li>
+                <li>CP</li>
+                <li>Urge to know about new technologies</li>
+              </ul>
+            </div><!-- Edn Resume Item -->
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Resume Section -->
+
+    <!-- Services Section -->
+    <!-- /Services Section -->
+
+    <!-- Stats Section -->
+    <section id="portfolio" class="stats section accent-background">
+
+      <img src="{{url_for('static',filename='assets/img/stats-bg.jpg')}}" alt="" data-aos="fade-in">
+
+      <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="4" data-purecounter-duration="0" class="purecounter">4</span>
+              <p>Projects</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="0" data-purecounter-duration="0" class="purecounter">0</span>
+              <p>Hackathons</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="60" data-purecounter-duration="0" class="purecounter">60</span>
+              <p>Leetcode questions</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="0" data-purecounter-duration="0" class="purecounter">0</span>
+              <p>Events attended</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Stats Section -->
+
+    <!-- Portfolio Section -->
+    <section id="projects" class="portfolio section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>My Projects</h2>
+        <p>Engaging in projects can significantly enhance job prospects.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+          <!-- End Portfolio Filters -->
+
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+          {% for post in posts %}
+          {% set fname= 'assets/img/portfolio/' + post.img_file %}
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+            
+            <img src="{{url_for('static',filename=fname)}}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>{{post.Title}}</h4>
+              <p>{{post.Subtitle}}</p>
+              <p>Date:- {{post.Date}}</p>
+              <a href="{{url_for('static',filename=fname)}}" title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="/portfolio" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+          {% endfor %}
+            <!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <img src="{{url_for('static',filename='assets/img/portfolio/product-1.jpg')}}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Sign Language Detection</h4>
+                <p>Sign language detection technology leverages advanced machine learning and computer vision to recognize and interpret sign language gestures in real-time.</p>
+                <a href="{{url_for('static',filename='assets/img/portfolio/product-1.jpg')}}" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="/portfolio" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="{{url_for('static',filename='assets/img/portfolio/branding-1.jpg')}}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Working Blog Website</h4>
+                <p>Blogging websites are platforms that allow individuals and organizations to publish and share their thoughts, stories, expertise, and creative content online. </p>
+                <a href="{{url_for('static',filename='assets/img/portfolio/branding-1.jpg')}}" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="/portfolio" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+              <img src="{{url_for('static',filename='assets/img/portfolio/books-1.jpg')}}" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Portfolio</h4>
+                <p>A portfolio is a curated collection of your work that demonstrates your skills, accomplishments, and experience. </p>
+                <a href="{{url_for('static',filename='assets/img/portfolio/books-1.jpg')}}" title="Branding 1" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="/portfolio" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            
+          </div><!-- End Portfolio Container -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Section -->
+
+    <!-- Pricing Section -->
+    
+    <!-- Faq Section -->
+    
+
+          
+
+
+    <!-- Testimonials Section -->
+    <!-- /Testimonials Section -->
+
+    <!-- Contact Section -->
+     <hr>
+    <!-- /Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+      </div><!-- End Section Title -->
+  
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+  
+        <div class="info-wrap" data-aos="fade-up" data-aos-delay="200">
+          <div class="row gy-5">
+  
+            <div class="col-lg-4">
+              <div class="info-item d-flex align-items-center">
+                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                <div>
+                  <h3>Address</h3>
+                  <p>{{Billo['address']}}</p>
+                </div>
+              </div>
+            </div><!-- End Info Item -->
+  
+            <div class="col-lg-4">
+              <div class="info-item d-flex align-items-center">
+                <i class="bi bi-telephone flex-shrink-0"></i>
+                <div>
+                  <h3>Call Us</h3>
+                  <p>{{Billo['Phone']}}</p>
+                </div>
+              </div>
+            </div><!-- End Info Item -->
+  
+            <div class="col-lg-4">
+              <div class="info-item d-flex align-items-center">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h3>Email Us</h3>
+                  <p>{{Billo['Email']}}</p>
+                </div>
+              </div>
+            </div><!-- End Info Item -->
+  
+          </div>
+        </div>
+  
+        
+      </div>
+  
+    </section>
+  
+    <!-- Contact 1 - Bootstrap Brain Component -->
+  <section id="contact" class="bg-light py-3 py-md-5">
+      
+    
+      <div class="container">
+        <div class="row justify-content-lg-center">
+          <div class="col-12 col-lg-9">
+            <div class="bg-white border rounded shadow-sm overflow-hidden">
+    
+              <form action="/" method="POST">
+                <div class="row gy-4 gy-xl-5 p-4 p-xl-5">
+                  <div class="col-12">
+                    <label for="fullname" class="form-label">Full Name <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="fullname" name="name" value="" required>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                    <div class="input-group">
+                      <span class="input-group-text">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                          <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+                        </svg>
+                      </span>
+                      <input type="email" class="form-control" id="email" name="email" value="" required>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                      <label for="fullname" class="form-label">Subject <span class="text-danger">*</span></label>
+                      <input type="text" class="form-control" id="fullname" name="subject" value="" required>
+                    </div>
+                  <div class="col-12">
+                    <label for="message" class="form-label">Message <span class="text-danger">*</span></label>
+                    <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+                  </div>
+                  <div class="col-12">
+                    <div class="d-grid">
+  
+                      <button class="btn btn-primary btn-lg" type="submit">Submit</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+    
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+{% endblock content %}
